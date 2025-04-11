@@ -1,0 +1,177 @@
+/* DESKTOP */
+
+* {
+  background-color: rgb(215, 243, 215);
+}
+
+/* layout for body */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 65px auto 30px;
+}
+
+/* layout for navbar */
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-nav {
+  width: 80px;
+}
+
+/* layout for main */
+main {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto, auto, auto;
+  justify-items: center;
+}
+
+/* intro layout */
+
+.intro {
+  width: fit-content;
+  display: flex;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: solid black 1px;
+}
+
+.intro-img {
+  position: absolute;
+  justify-self: flex-start;
+  border: solid black 1px;
+  height: 200px;
+  width: 180px;
+  z-index: 0;
+}
+
+.about-me {
+  justify-self: flex-end;
+  z-index: 1;
+  border: solid black 1px;
+  max-width: 600px;
+  margin-top: 60px;
+  margin-left: 160px;
+  padding: 10px;
+}
+
+/* projects layout */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: solid black 1px;
+}
+
+.project-display {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-div {
+  border: black solid 1px;
+  margin: 15px;
+  width: 200px;
+  height: 200px;
+}
+
+/* contact layout */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: solid black 1px;
+}
+
+.contact h2 {
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-btns > button {
+  margin: 15px;
+}
+
+.contact-img {
+  height: 150px;
+  width: 150px;
+  border: solid black 1px;
+  margin: 10px;
+}
+
+/* TABLET BREAKPOINT*/
+
+@media screen and (max-width: 1000px) {
+  * {
+    background-color: rgb(241, 241, 184);
+  }
+
+  .contact-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+  }
+
+  .contact-img {
+    height: 150px;
+    width: 150px;
+    border: solid black 1px;
+    margin: 10px;
+  }
+
+  .project-display {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* MOBILE BREAKPOINT*/
+
+@media screen and (max-width: 600px) {
+  * {
+    background-color: rgb(250, 191, 191);
+  }
+
+  .intro {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-img {
+    position: relative;
+    border: solid black 1px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .about-me {
+    position: relative;
+    margin: 0;
+  }
+
+  .about-me > h2 {
+    justify-self: center;
+  }
+}
