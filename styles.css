@@ -1,23 +1,45 @@
 /* DESKTOP */
 
-* {
-  background-color: rgb(215, 243, 215);
+:root {
+  font-family: "Funnel Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  --light-blue: #daf1fc;
+  --light-grey: #eaebeb;
+  --dark-grey: #adadad;
+  --dark-blue: #b4e3f8;
+}
+
+button {
+  background-color: white;
+  border: solid 1px var(--dark-grey);
+  border-radius: 5px;
+  text-align: center;
+  min-height: 25px;
+}
+
+button:hover {
+  background-color: var(--dark-blue);
+  cursor: pointer;
 }
 
 /* layout for body */
 body {
   margin: 0;
-  min-height: 100vh;
   display: grid;
   grid-template-rows: 65px auto 30px;
+  background-color: var(--light-blue);
+  max-height: fit-content;
 }
 
 /* layout for navbar */
 nav {
   padding: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  background-color: var(--light-grey);
+  border-bottom: 1px solid var(--dark-grey);
 }
 
 .btn-nav {
@@ -26,10 +48,10 @@ nav {
 
 /* layout for main */
 main {
-  padding: 10px;
   display: grid;
   grid-template-columns: auto, auto, auto;
   justify-items: center;
+  width: 100%;
 }
 
 /* intro layout */
@@ -39,26 +61,26 @@ main {
   display: flex;
   margin-top: 10px;
   padding-top: 10px;
-  border-top: solid black 1px;
 }
 
 .intro-img {
   position: absolute;
   justify-self: flex-start;
-  border: solid black 1px;
-  height: 200px;
+  height: auto;
   width: 180px;
   z-index: 0;
+  border-radius: 5px;
 }
 
 .about-me {
   justify-self: flex-end;
   z-index: 1;
-  border: solid black 1px;
   max-width: 600px;
   margin-top: 60px;
   margin-left: 160px;
   padding: 10px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 /* projects layout */
@@ -66,9 +88,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-top: solid black 1px;
+  padding-bottom: 10px;
+}
+
+.projects h2 {
+  background-color: var(--light-grey);
+  width: 98%;
+  text-align: center;
+  padding: 3px;
+  border: 1px solid var(--dark-grey);
 }
 
 .project-display {
@@ -77,10 +108,26 @@ main {
 }
 
 .project-div {
-  border: black solid 1px;
+  border: var(--dark-grey) solid 1px;
   margin: 15px;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.project-div i {
+  font-size: 30px;
+}
+
+.project-div p {
+  padding-top: 3;
+  padding-bottom: 3;
+  text-align: center;
 }
 
 /* contact layout */
@@ -88,10 +135,16 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: solid black 1px;
+
+  width: 100%;
 }
 
 .contact h2 {
+  background-color: var(--light-grey);
+  width: 98%;
+  text-align: center;
+  padding: 3px;
+  border: 1px solid var(--dark-grey);
 }
 
 .contact-content {
@@ -110,17 +163,28 @@ main {
 }
 
 .contact-img {
-  height: 150px;
+  height: fit-content;
   width: 150px;
-  border: solid black 1px;
   margin: 10px;
+  border-radius: 5px;
+}
+
+/* footer layout */
+footer {
+  background-color: var(--light-grey);
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid var(--dark-grey);
 }
 
 /* TABLET BREAKPOINT*/
 
 @media screen and (max-width: 1000px) {
-  * {
-    background-color: rgb(241, 241, 184);
+  .intro-img {
+    margin-left: 10px;
+  }
+  .about-me {
+    margin-right: 10px;
   }
 
   .contact-btns {
@@ -131,9 +195,8 @@ main {
   }
 
   .contact-img {
-    height: 150px;
+    height: fit-content;
     width: 150px;
-    border: solid black 1px;
     margin: 10px;
   }
 
@@ -148,10 +211,6 @@ main {
 /* MOBILE BREAKPOINT*/
 
 @media screen and (max-width: 600px) {
-  * {
-    background-color: rgb(250, 191, 191);
-  }
-
   .intro {
     width: fit-content;
     display: flex;
@@ -161,14 +220,13 @@ main {
 
   .intro-img {
     position: relative;
-    border: solid black 1px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 90%;
   }
 
   .about-me {
     position: relative;
-    margin: 0;
+    margin: 10px;
   }
 
   .about-me > h2 {
