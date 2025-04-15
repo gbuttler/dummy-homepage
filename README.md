@@ -5,15 +5,8 @@
 - to create a responsive homepage using HTML and CSS
 - use this as a chance to practise for my professional portfolio homepage
 
-## Steps
+## Future Steps
 
-- put all basic info onto the html
-- style the layout for desktop
-- style the layout for tablet
-- style the layout for mobile
-- choose and include images
-- allow for image resizing
-- choose and add font
-- choose colours
+- Work on the design aspect and create mood boards to inspire colour combinations
 
 **Inspired by 'The Odin Project'**
